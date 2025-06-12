@@ -1,6 +1,6 @@
-streamlit
-pandas
-numpy
-scikit-learn
-dill==0.3.6
-autogluon
+streamlit==1.45.1
+pandas==1.5.3
+numpy==1.22.4
+scikit-learn==1.1.3
+dill==0.3.3
+autogluon==0.8.2
