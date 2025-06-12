@@ -2,5 +2,5 @@ streamlit
 pandas
 numpy
 scikit-learn
-dill
+dill==0.3.6
 autogluon
