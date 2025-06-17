@@ -101,6 +101,18 @@ if uploaded_file:
     target_cols = st.multiselect("Select Target Column(s)", options=columns)
 
     if st.button("Run Pipeline") and target_cols:
+        import datetime
+
+
+        try:
+            with open("log_pipeline.txt", "a") as f:
+                f.write(f"Pipeline run at {datetime.datetime.now()}\n")
+        except Exception as e:
+            st.warning(f"⚠️ Could not write to pipeline log: {e}")
+
+        # Now run your actual pipeline
+        # ...
+
         with st.spinner("Processing and training model..."):
             try:
                 target_column = target_cols[0] if isinstance(target_cols, list) else target_cols
@@ -164,13 +176,21 @@ if st.session_state.csv_ready:
         mime="text/csv"
     )
 
+import datetime
+
 if st.session_state.model_ready:
-    st.download_button(
+    if st.download_button(
         label="📦 Download Model + Preprocessing Pipeline (.pkl)",
         data=st.session_state.model_buffer,
         file_name="autogluon_model_dill.pkl",
         mime="application/octet-stream"
-    )
+    ):
+        try:
+            with open("log.txt", "a") as f:
+                f.write(f"Download at {datetime.datetime.now()}\n")
+        except Exception as e:
+            st.warning(f"⚠️ Could not write to log: {e}")
+
 
 if st.session_state.model_ready:
     st.subheader("📊 Best Model Evaluation")
