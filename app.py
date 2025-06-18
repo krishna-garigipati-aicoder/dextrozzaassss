@@ -75,6 +75,17 @@ def preprocessing_pipeline(target_column=None, normalize=True, standardize=False
 st.set_page_config(page_title="DataJet", page_icon="✈️", layout="wide")
 st.title("✈️ DataJet: A tabular one-click AutoML pipeline")
 
+st.markdown("""
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRMTN343V7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JRMTN343V7');
+</script>
+""", unsafe_allow_html=True)
+
 uploaded_file = st.file_uploader("Upload your CSV", type=["csv"])
 
 if "csv_ready" not in st.session_state:
@@ -230,15 +241,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown("""
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRMTN343V7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JRMTN343V7');
-</script>
-""", unsafe_allow_html=True)
+
 
 
