@@ -17,16 +17,6 @@ from sklearn.base import BaseEstimator, TransformerMixin
 import numpy as np
 import dill  
 
-st.markdown("""
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRMTN343V7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-JRMTN343V7');
-</script>
-""", unsafe_allow_html=True)
 
 
 class CustomPreprocessor(BaseEstimator, TransformerMixin):
@@ -239,4 +229,16 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+st.markdown("""
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JRMTN343V7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JRMTN343V7');
+</script>
+""", unsafe_allow_html=True)
+
 
