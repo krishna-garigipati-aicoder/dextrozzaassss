@@ -217,3 +217,14 @@ if st.session_state.model_ready:
 
     except Exception as e:
         st.error(f"Error during evaluation: {e}")
+
+st.markdown(
+    """
+    <hr style="margin-top: 50px; margin-bottom: 10px;">
+    <div style="text-align: center; color: grey; font-size: 14px;">
+        📬 For feedback or suggestions, mail us at <a href="mailto:srinimagi99@gmail.com">srinimagi99@gmail.com</a>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
