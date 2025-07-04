@@ -3,9 +3,10 @@ import dill
 from io import BytesIO
 import pandas as pd
 
-def train_autogluon_model(train_df, target_column, model_path="models/autogluon_model"):
+def train_autogluon_model(train_df, target_column, model_path="models/autogluon_model", time_limit = 50):
     predictor = TabularPredictor(label=target_column, path=model_path).fit(
         train_df,
+        time_limit = time_limit
     )
     return predictor
 
