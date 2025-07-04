@@ -4,4 +4,4 @@ pandas==1.5.3
 numpy==1.26.4
 scikit-learn==1.2.2
 dill==0.3.8
-autogluon.tabular[xgboost]==0.8.2
+autogluon.tabular[lightgbm, xgboost]==0.8.2
